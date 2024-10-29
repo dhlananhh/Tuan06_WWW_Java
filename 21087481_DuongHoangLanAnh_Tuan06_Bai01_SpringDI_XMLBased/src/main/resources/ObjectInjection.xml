@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util 
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- bean definitions here -->
+    <bean id="class1" class="iuh.fit.se.xmlbased.entities.Class_">
+        <property name="classId" value="DHKTPM17C"></property>
+        <property name="className" value="Dai Hoc KTPM17C"></property>
+    </bean>
+    <bean id="student1" class="iuh.fit.se.xmlbased.entities.Student">
+        <property name="id" value="001"></property>
+        <property name="name" value="Nguyen Van A"></property>
+        <property name="class_" ref="class1"></property>
+    </bean>
+    <bean id="student2" class="iuh.fit.se.xmlbased.entities.Student">
+        <constructor-arg name="id" value="002"></constructor-arg>
+        <constructor-arg name="name" value="Tran Van B"></constructor-arg>
+        <constructor-arg name="class_" ref="class1"></constructor-arg>
+    </bean>
+</beans>
